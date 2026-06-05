@@ -10,7 +10,7 @@ class Solution {
             }
 
             while (start < end && !Character.isLetterOrDigit(s.charAt(end))) {
-                right--;
+                end--;
             }
 
             if (Character.toLowerCase(s.charAt(start)) !=
