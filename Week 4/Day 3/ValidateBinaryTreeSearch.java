@@ -3,7 +3,7 @@ class Solution {
         return validate(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
 
-    private boolean validate(TreeNode node, long min, long max) {
+    public boolean validate(TreeNode node, long min, long max) {
         if (node == null) {
             return true;
         }
