@@ -1,13 +1,13 @@
 class Solution {
-    boolean search(Node root, int key) {
-        if (root == null) {
-            return false;
+    public TreeNode searchBST(TreeNode root, int val) {
+        if (root == null || root.val == val) {
+            return root;
         }
 
-        if (root.data == key) {
-            return true;
+        if (val < root.val) {
+            return searchBST(root.left, val);
         }
 
-        return search(root.left, key) || search(root.right, key);
+        return searchBST(root.right, val);
     }
 }
